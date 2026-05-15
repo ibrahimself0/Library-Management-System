@@ -1,24 +1,70 @@
-# Logs
+# dependencies
+node_modules/
+
+# production
+dist/
+build/
+
+# logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# coverage
+coverage/
+
+# vite
+vite.config.ts.timestamp-*
+
+# cache
+.cache/
+.parcel-cache/
+
+# temporary files
+tmp/
+temp/
+
+# generated files
 *.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# package managers
+.pnp
+.pnp.js
+
+# eslint cache
+.eslintcache
+
+# testing
+playwright-report/
+test-results/
+
+# next.js
+.next/
+
+# nuxt
+.nuxt/
+
+# misc
+*.swp
+*.swo

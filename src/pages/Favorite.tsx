@@ -1,11 +1,13 @@
 import Page from "../utils/Page.tsx";
-import FavoriteHeader from "../components/Favorite/FavoriteHeader.tsx";
 import BookGrid from "../components/BookGrid.tsx";
+import Header from "../components/Header.tsx";
 
 function Favorite() {
     return (
         <Page>
-            <FavoriteHeader/>
+            <Header
+            title={"Favorite"}
+            paragraph={" "}/>
             <BookGrid/>
         </Page>
     );

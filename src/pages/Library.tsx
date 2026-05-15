@@ -1,13 +1,15 @@
 import Page from "../utils/Page.tsx";
-import LibraryHeader from "../components/Library/LibraryHeader.tsx";
 import SearchBar from "../components/SearchBar.tsx";
 import Slider from "../components/Slider.tsx";
 import FavoritesList from "../components/Library/FavoritesList.tsx";
+import Header from "../components/Header.tsx";
 
 function Library() {
     return (
         <Page>
-            <LibraryHeader/>
+            <Header
+            title = {"Library"}
+            paragraph={" "}/>
             <SearchBar/>
             {/*Active borrows*/}
             <Slider/>
