@@ -1,6 +1,6 @@
 import Page from "../utils/Page.tsx";
 import Hero from "../components/Home/Hero/Hero.tsx";
-import Slider from "../components/Slider.tsx";
+import BookSlider from "../components/BookSlider.tsx";
 import SignupCard from "../components/Home/SignupCard.tsx";
 import CategoriesList from "../components/Home/CategoriesList.tsx";
 
@@ -10,9 +10,9 @@ function Home() {
            <Hero/>
            <CategoriesList/>
            {/*Popular*/}
-           <Slider/>
+           <BookSlider/>
            {/*New*/}
-           <Slider/>
+           <BookSlider/>
            <SignupCard/>
        </Page>
     );

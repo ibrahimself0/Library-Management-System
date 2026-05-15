@@ -1,4 +1,4 @@
-function Slider() {
+function BookSlider() {
     return (
         <div>
             Slider
@@ -6,4 +6,4 @@ function Slider() {
     );
 }
 
-export default Slider;
+export default BookSlider;

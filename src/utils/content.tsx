@@ -10,6 +10,12 @@ import Cart from "../pages/Cart.tsx";
 import CheckOut from "../pages/CheckOut.tsx";
 import Wallet from "../pages/Wallet.tsx";
 import Transactions from "../pages/Transactions.tsx";
+import Events from "../pages/Events.tsx";
+import Event from "../pages/Event.tsx";
+import MyEvents from "../pages/MyEvents.tsx";
+import SupervisorEvents from "../pages/SupervisorEvents.tsx";
+import CreateEvent from "../pages/CreateEvent.tsx";
+import Attendees from "../pages/Attendees.tsx";
 export const navigationLinks: NavigationLink[] = [
     {
         id: 1,
@@ -87,7 +93,49 @@ export const navigationLinks: NavigationLink[] = [
         text: "Transactions",
         dropdown: false,
         element:<Transactions/>
-    }
+    },
+    {
+        id: 12,
+        href: "/events",
+        text: "Events",
+        dropdown: false,
+        element:<Events/>
+    },
+    {
+        id: 13,
+        href: "/event",
+        text: "Event",
+        dropdown: false,
+        element:<Event/>
+    },
+    {
+        id: 14,
+        href: "/myEvents",
+        text: "MyEvents",
+        dropdown: false,
+        element:<MyEvents/>
+    },
+    {
+        id: 15,
+        href: "/supervisorEvents",
+        text: "Supervisor Events",
+        dropdown: false,
+        element:<SupervisorEvents/>
+    },
+    {
+        id: 16,
+        href: "/create/event",
+        text: "CreateEvent",
+        dropdown: false,
+        element:<CreateEvent/>
+    },
+    {
+        id: 17,
+        href: "/attendees",
+        text: "Attendees",
+        dropdown: false,
+        element:<Attendees/>
+    },
 ];
 
 export const headersText: Record<string, HeaderText> = {

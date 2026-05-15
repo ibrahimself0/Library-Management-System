@@ -1,6 +1,6 @@
 import Page from "../utils/Page.tsx";
 import SearchBar from "../components/SearchBar.tsx";
-import Slider from "../components/Slider.tsx";
+import BookSlider from "../components/BookSlider.tsx";
 import FavoritesList from "../components/Library/FavoritesList.tsx";
 import Header from "../components/Header.tsx";
 
@@ -12,9 +12,9 @@ function Library() {
             paragraph={" "}/>
             <SearchBar/>
             {/*Active borrows*/}
-            <Slider/>
+            <BookSlider/>
             {/*All Books*/}
-            <Slider/>
+            <BookSlider/>
             <FavoritesList/>
         </Page>
     );
