@@ -16,6 +16,7 @@ import MyEvents from "../pages/MyEvents.tsx";
 import SupervisorEvents from "../pages/SupervisorEvents.tsx";
 import CreateEvent from "../pages/CreateEvent.tsx";
 import Attendees from "../pages/Attendees.tsx";
+import LogInPage from "../pages/LogInPage.tsx";
 export const navigationLinks: NavigationLink[] = [
     {
         id: 1,
@@ -135,7 +136,13 @@ export const navigationLinks: NavigationLink[] = [
         text: "Attendees",
         dropdown: false,
         element:<Attendees/>
-    },
+    },{
+        id: 17,
+        href: "/login",
+        text: "LogInPage",
+        dropdown: false,
+        element:<LogInPage/>
+    }
 ];
 
 export const headersText: Record<string, HeaderText> = {
