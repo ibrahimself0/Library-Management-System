@@ -84,6 +84,6 @@ export async function sendRequest<
             "Request failed"
         );
     }
-
+    console.log(response.status)
     return response.json();
 }

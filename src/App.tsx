@@ -1,7 +1,7 @@
 import { navigationLinks } from "./utils/links.tsx";
 import { Route, Routes } from "react-router";
-import LoginPage from "./pages/LogInPage.tsx";
 import Navbar from "./components/Navigation/Navbar.tsx";
+import Register from "./pages/Register.tsx";
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         );
     if (!token) {
         return (
-            <LoginPage/>
+            <Register/>
         );
     }
     return (
