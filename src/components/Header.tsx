@@ -6,9 +6,7 @@ function Header(props: HeaderProps) {
             <h1>
                 {props.title}
             </h1>
-            <p>
-                {props.smallText}
-            </p>
+
         </header>
     );
 }

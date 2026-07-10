@@ -31,7 +31,7 @@ export async function sendRequest<
 
         Accept:
             "application/json",
-            "Accept-Language": "ar"
+        "Accept-Language": "ar"
     };
 
     if (token) {
@@ -62,9 +62,10 @@ export async function sendRequest<
         headers["Content-Type"] =
             "application/json";
 
-
         body =
-            config.method !== "GET"
+            config.method === "POST" ||
+            config.method === "PUT" ||
+            config.method === "DELETE"
                 ? JSON.stringify(data)
                 : undefined;
     }
