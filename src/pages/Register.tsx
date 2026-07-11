@@ -6,6 +6,8 @@ import Typography from "@mui/material/Typography";
 import {TextField} from "@mui/material";
 import CardActions from "@mui/material/CardActions";
 import {useRegister} from "../hooks/useRegister.ts";
+import { Link } from "react-router-dom";
+
 
 function Register() {
     const { mutate, isPending, error } = useRegister();
@@ -65,11 +67,11 @@ function Register() {
                         <Typography gutterBottom variant="h5" component="div" className="text-center">
                             Create Your Account
                         </Typography>
-                        <Typography variant="body2" className="text-center pb-5">
+                        <Typography variant="body2" className="text-center pb-3">
                             Enter your details to join our digital sanctuary.
                         </Typography>
 
-                        <form onSubmit={handleRegister} className="flex flex-col items-center gap-y-5">
+                        <form onSubmit={handleRegister} className="flex flex-col items-center gap-y-3">
                             <div className="flex gap-2">
                                 <TextField
                                     required
@@ -141,7 +143,15 @@ function Register() {
                                     {isPending ? "Registering..." : "Register"}
                                 </button>
                             </CardActions>
-
+                            <Typography variant="body2" className="text-center">
+                                Already have an account?{" "}
+                                <Link
+                                    to="/login"
+                                    className="text-green-700 hover:underline font-medium"
+                                >
+                                    Log in
+                                </Link>
+                            </Typography>
 
                             {passwordError && (
                                 <p className="text-red-500 text-sm">
@@ -150,6 +160,7 @@ function Register() {
                             )}
 
                         </form>
+
                     </CardContent>
 
                     {error && (
