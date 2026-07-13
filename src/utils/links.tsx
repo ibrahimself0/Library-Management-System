@@ -18,12 +18,14 @@ import CreateEvent from "../pages/CreateEvent.tsx";
 import Attendees from "../pages/Attendees.tsx";
 import LogInPage from "../pages/LogInPage.tsx";
 import Register from "../pages/Register.tsx";
+import ForgotPassword from "../pages/ForgotPassword.tsx";
 export const navigationLinks: NavigationLink[] = [
     {
         id: 1,
         href: "/",
         text: "Home",
         dropdown: false,
+        noToken:false,
         element:<Home/>
     },
     {
@@ -31,6 +33,7 @@ export const navigationLinks: NavigationLink[] = [
         href: "/search",
         text: "Search",
         dropdown: false,
+        noToken:false,
         element:<Search/>
     },
     {
@@ -38,6 +41,7 @@ export const navigationLinks: NavigationLink[] = [
         href: "/categories",
         text: "Categories",
         dropdown: false,
+        noToken:false,
         element:<Categories/>
     },
     {
@@ -45,6 +49,7 @@ export const navigationLinks: NavigationLink[] = [
         href: "/library",
         text: "Library",
         dropdown: false,
+        noToken:false,
         element:<Library/>
     },
     {
@@ -52,6 +57,7 @@ export const navigationLinks: NavigationLink[] = [
         href: "/library/favorites",
         text: "Favorites",
         dropdown: false,
+        noToken:false,
         element:<Favorite/>
     },
     {
@@ -59,6 +65,7 @@ export const navigationLinks: NavigationLink[] = [
         href: "/profile",
         text: "Profile",
         dropdown: false,
+        noToken:false,
         element:<Profile/>
     },
     {
@@ -66,6 +73,7 @@ export const navigationLinks: NavigationLink[] = [
         href: "/profile/settings",
         text: "Settings",
         dropdown: false,
+        noToken:false,
         element:<Settings/>
     },
     {
@@ -73,6 +81,7 @@ export const navigationLinks: NavigationLink[] = [
         href: "/cart",
         text: "Cart",
         dropdown: false,
+        noToken:false,
         element:<Cart/>
     },
     {
@@ -80,6 +89,7 @@ export const navigationLinks: NavigationLink[] = [
         href: "/cart/checkout",
         text: "CheckOut",
         dropdown: false,
+        noToken:false,
         element:<CheckOut/>
     },
     {
@@ -87,6 +97,7 @@ export const navigationLinks: NavigationLink[] = [
         href: "/wallet",
         text: "Wallet",
         dropdown: false,
+        noToken:false,
         element:<Wallet/>
     },
     {
@@ -94,6 +105,7 @@ export const navigationLinks: NavigationLink[] = [
         href: "/wallet/transactions",
         text: "Transactions",
         dropdown: false,
+        noToken:false,
         element:<Transactions/>
     },
     {
@@ -101,6 +113,7 @@ export const navigationLinks: NavigationLink[] = [
         href: "/events",
         text: "Events",
         dropdown: false,
+        noToken:false,
         element:<Events/>
     },
     {
@@ -108,6 +121,7 @@ export const navigationLinks: NavigationLink[] = [
         href: "/event",
         text: "Event",
         dropdown: false,
+        noToken:false,
         element:<Event/>
     },
     {
@@ -115,6 +129,7 @@ export const navigationLinks: NavigationLink[] = [
         href: "/myEvents",
         text: "MyEvents",
         dropdown: false,
+        noToken:false,
         element:<MyEvents/>
     },
     {
@@ -122,6 +137,7 @@ export const navigationLinks: NavigationLink[] = [
         href: "/supervisorEvents",
         text: "Supervisor Events",
         dropdown: false,
+        noToken:false,
         element:<SupervisorEvents/>
     },
     {
@@ -129,6 +145,7 @@ export const navigationLinks: NavigationLink[] = [
         href: "/create/event",
         text: "CreateEvent",
         dropdown: false,
+        noToken:false,
         element:<CreateEvent/>
     },
     {
@@ -136,18 +153,26 @@ export const navigationLinks: NavigationLink[] = [
         href: "/attendees",
         text: "Attendees",
         dropdown: false,
+        noToken:false,
         element:<Attendees/>
     },{
         id: 17,
         href: "/login",
         text: "LogInPage",
         dropdown: false,
+        noToken:true,
         element:<LogInPage/>
     },{
         id: 18,
         href: "/register",
         text: "Register",
-        dropdown: false,
+        dropdown: true,  noToken:false,
         element:<Register/>
+    },{
+        id: 19,
+        href: "/forgotpassword",
+        text: "Forgot Password",
+        dropdown: true,  noToken:false,
+        element:<ForgotPassword/>
     }
 ];

@@ -9,6 +9,11 @@ export const endpoints = {
         method: "POST",
         path: "/api/auth/register",
         isFormData: true
+    },
+    forgotpassword:{
+        method: "POST",
+        path: "/api/auth/forgotpassword",
+        isFormData: true
     }
 
 

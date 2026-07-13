@@ -7,6 +7,7 @@ export interface NavigationLink {
     dropdown: boolean;
     dropdownLinks?: NavigationLink[];
     element: ReactElement;
+    noToken: boolean;
 }
 export interface HeaderProps{
     title: string;

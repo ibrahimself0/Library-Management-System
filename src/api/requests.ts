@@ -15,3 +15,8 @@ export function register(email: string, password: string,password_confirmation: 
         last_name:last_name,
     })
 }
+export function forgotpassword(email: string) {
+    return sendRequest("forgotpassword",{
+        email:email,
+    })
+}

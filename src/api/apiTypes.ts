@@ -26,4 +26,12 @@ export interface ApiMap {
             message: string;
         };
     };
+    forgotpassword:{
+        request: {
+            email: string;
+        };
+        response: {
+            message: string;
+        }
+    }
 }
