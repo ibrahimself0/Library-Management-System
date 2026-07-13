@@ -2,16 +2,20 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import React from 'react';
+import React, {useState} from 'react';
 import {TextField} from "@mui/material";
 import Logo from "../assets/Icons/Logo.tsx";
 import {useLogin} from "../hooks/useLogin.ts";
+import {Link} from "react-router-dom";
 
 
 function LoginPage() {
 
     const { mutate, isPending, error } = useLogin();
 
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const vaildCredentials = email !=="" && password !=="";
     const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -51,18 +55,18 @@ function LoginPage() {
                                 name="email"
                                 id="email"
                                 label="Email"
-                                defaultValue="example@gmail.com"
                                 type="email"
+                                onChange={(e) => setEmail(e.target.value)}
                             />
 
                             <div className="w-full">
                                 <div className="flex justify-end items-center mb-1 px-1">
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to ="/forgot/password"
                                         className="text-sm text-grey hover:text-green-800 hover:underline"
                                     >
                                         Forgot password?
-                                    </a>
+                                    </Link>
                                 </div>
                                 <TextField
                                     required
@@ -70,21 +74,34 @@ function LoginPage() {
                                     name="password"
                                     id="password"
                                     label="Password"
-                                    defaultValue="admin1234"
                                     type="password"
+                                    onChange={(e) => setPassword(e.target.value)}
                                 />
                             </div>
 
                             <CardActions className="justify-center items-center w-full">
                                 <button
                                     type="submit"
-                                    className="flex items-center justify-center px-4 py-2 bg-green-800 rounded-md text-white w-full mb-4"
-                                    disabled={isPending}
+                                    disabled={ isPending || !vaildCredentials}
+                                    className={`w-full rounded-md py-2 text-white transition ${
+                                        vaildCredentials 
+                                            ? "bg-green-800 hover:bg-green-900"
+                                            : "bg-gray-400 cursor-not-allowed"
+                                    }`}
                                 >
-                                    {isPending ? "Logging in..." : "Login"}
+                                    {isPending ? "Logging..." : "Login"}
                                 </button>
                             </CardActions>
                         </form>
+                        <Typography variant="body2" className="text-center">
+                            Don't have an account?{" "}
+                            <Link
+                                to="/register"
+                                className="text-green-700 hover:underline font-medium"
+                            >
+                                Register
+                            </Link>
+                        </Typography>
                     </CardContent>
 
                     {error && (

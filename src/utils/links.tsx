@@ -166,13 +166,15 @@ export const navigationLinks: NavigationLink[] = [
         id: 18,
         href: "/register",
         text: "Register",
-        dropdown: true,  noToken:false,
+        dropdown: true,
+        noToken:true,
         element:<Register/>
     },{
         id: 19,
-        href: "/forgotpassword",
+        href: "/forgot/password",
         text: "Forgot Password",
-        dropdown: true,  noToken:false,
+        dropdown: true,
+        noToken:true,
         element:<ForgotPassword/>
     }
 ];

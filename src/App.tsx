@@ -14,7 +14,7 @@ function App() {
     if (!token) {
         return (
             <Routes>
-                <Route path="/" element={<Navigate to="/register" replace />} />
+                <Route path="/" element={<Navigate to="/login" replace />} />
                 {navigationLinks.map((route) => {
                     if(route.noToken){
                         return (
