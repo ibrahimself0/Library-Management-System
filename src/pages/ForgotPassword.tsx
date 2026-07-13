@@ -19,8 +19,6 @@ function ForgotPassword() {
 
         const formData = new FormData(e.currentTarget);
         const email = formData.get('email') as string;
-
-
         mutate({ email });
     };
 

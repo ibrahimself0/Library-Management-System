@@ -1,6 +1,7 @@
 import { navigationLinks } from "./utils/links.tsx";
 import { Route, Routes ,Navigate } from "react-router";
-import Navbar from "./components/Navigation/Navbar.tsx";
+import {Navbar} from "./components/Navigation/Navbar.tsx";
+
 
 
 
@@ -10,6 +11,7 @@ function App() {
         localStorage.getItem(
             "token"
         );
+    console.log(token);
 
     if (!token) {
         return (
@@ -34,9 +36,9 @@ function App() {
         return (
             <div className="flex h-screen w-screen overflow-hidden">
                 <div className="flex flex-1 flex-col">
-                    <div className="flex h-16 items-center bg-cream px-6 text-white">
-                        <Navbar/>
-                    </div>
+
+                    <Navbar/>
+
                     <main className="flex-1 overflow-y-auto bg-gray-400 p-6">
                         <Routes>
                             <>

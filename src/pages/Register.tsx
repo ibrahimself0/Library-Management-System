@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import {TextField} from "@mui/material";
 import CardActions from "@mui/material/CardActions";
 import {useRegister} from "../hooks/useRegister.ts";
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 
 function Register() {
@@ -16,13 +16,15 @@ function Register() {
     const passwordsMatch = password === passwordConfirmation
     const hasMinLength = password.length >= 8;
     const hasUppercase = /[A-Z]/.test(password);
+    const hasLowercase = /[a-z]/.test(password);
     const hasNumber = /\d/.test(password);
     const hasSymbol = /[^A-Za-z0-9]/.test(password);
-
+    const navigate = useNavigate();
     const isPasswordValid =
         hasMinLength &&
         hasUppercase &&
         hasNumber &&
+        hasLowercase &&
         hasSymbol;
     let passwordError = "";
 
@@ -36,6 +38,8 @@ function Register() {
         passwordError = "Password must contain at least one special character.";
     } else if (!passwordsMatch) {
         passwordError = "Passwords do not match.";
+    }else if(!hasLowercase) {
+        passwordError = "Password must contain at least one lowercase letter.";
     }
     const handleRegister = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -47,6 +51,13 @@ function Register() {
         const first_name = formData.get('first_name') as string;
         const last_name = formData.get('last_name') as string;
         mutate({ email, password ,password_confirmation,first_name,last_name});
+        if (!error){
+            localStorage.setItem(
+                "token",
+                "token",
+            );
+            navigate("/");
+        }
     };
 
     return (
