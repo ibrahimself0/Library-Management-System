@@ -1,10 +1,14 @@
+import React from "react";
+
 interface PageProps {
-    children: React.ReactElement[];
+    children: React.ReactNode;
+    className?: string;
 }
-function Page(props: PageProps) {
+
+function Page({ children, className = "" }: PageProps) {
     return (
-        <div>
-            {props.children}
+        <div className={className}>
+            {children}
         </div>
     );
 }

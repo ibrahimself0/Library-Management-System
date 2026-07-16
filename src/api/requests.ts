@@ -20,3 +20,6 @@ export function forgotpassword(email: string) {
         email:email,
     })
 }
+export function getPopularBooks(){
+    return sendRequest("getPopularBooks",{})
+}

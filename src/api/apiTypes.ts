@@ -1,4 +1,5 @@
 import type {User} from "../models/models.ts";
+import type {PopularBooksResponse} from "../utils/contentTypes.tsx";
 
 export interface ApiMap {
 
@@ -33,5 +34,8 @@ export interface ApiMap {
         response: {
             message: string;
         }
-    }
+    };
+    getPopularBooks:{
+        response : PopularBooksResponse;
+    };
 }

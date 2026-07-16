@@ -14,6 +14,11 @@ export const endpoints = {
         method: "POST",
         path: "/api/auth/forgotpassword",
         isFormData: true
+    },
+    getPopularBooks:{
+        method: "GET",
+        path: "/api/books/popular",
+        isFormData: true
     }
 
 

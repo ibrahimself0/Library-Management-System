@@ -39,7 +39,7 @@ function App() {
 
                     <Navbar/>
 
-                    <main className="flex-1 overflow-y-auto bg-gray-400 p-6">
+                    <main className="flex-1 overflow-y-auto bg-[#F6F3F2] p-6">
                         <Routes>
                             <>
                                 {navigationLinks.map((route) => (
