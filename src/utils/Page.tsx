@@ -7,7 +7,7 @@ interface PageProps {
 
 function Page({ children, className = "" }: PageProps) {
     return (
-        <div className={className}>
+        <div className={className+ "w-full min-h-screen overflow-x-hidden"}>
             {children}
         </div>
     );

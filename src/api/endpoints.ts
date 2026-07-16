@@ -18,7 +18,7 @@ export const endpoints = {
     getPopularBooks:{
         method: "GET",
         path: "/api/books/popular",
-        isFormData: true
+        isFormData: false
     }
 
 
